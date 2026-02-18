@@ -16,6 +16,7 @@
   "type": "module",
   "dependencies": {
     "express": "^4.22.1",
+    "lowdb": "^7.0.1",
     "winston": "^3.19.0"
   },
   "devDependencies": {
