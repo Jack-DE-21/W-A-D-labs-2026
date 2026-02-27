@@ -1,24 +1,31 @@
 {{> menu id="about"}}
 
-<div class="ui centered card">
-  <div class="image">
-    <img src="{{employee.image}}">
-  </div>
+<section class="ui left aligned middle aligned segment">
+  <h2>About the Playlist app</h2>
+  <h3>Our Team</h3>
 
-  <div class="content">
-    <a class="header">{{employee.fullname}}</a>
-    <div class="meta">
-      <span class="date">Joined in {{employee.joined}}</span>
-    </div>
-    <div class="description">
-      {{employee.name}} is an {{employee.job}} living in {{employee.city}}.
-    </div>
-  </div>
+  <div class="ui three stackable cards">
 
-  <div class="extra content">
-    <a>
-      <i class="user icon"></i>
-      {{employee.mates}} contacts
-    </a>
+    {{#each employees}}
+      <div class="ui card">
+        <div class="image">
+          <img src="{{image}}">
+        </div>
+        <div class="content">
+          <a class="header">{{fullname}}</a>
+          <div class="meta">
+            <span class="date">Joined in {{joined}}</span>
+          </div>
+          <div class="description">
+            {{name}} is an {{job}} living in {{city}}.
+          </div>
+        </div>
+        <div class="extra content">
+          <i class="user icon"></i>
+          {{mates}} contacts
+        </div>
+      </div>
+    {{/each}}
+
   </div>
-</div>
+</section>
