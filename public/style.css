@@ -21,3 +21,11 @@ body {
 .hide {
   display: none;
 }
+
+table {
+  margin: auto;
+}
+
+.ui.statistic .label table {
+  margin-top: 10px;
+}

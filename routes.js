@@ -5,6 +5,7 @@ import start from './controllers/start.js';
 import dashboard from './controllers/dashboard.js';
 import about from './controllers/about.js';
 import playlist from './controllers/playlist.js';
+import stats from "./controllers/stats.js";
 
 const router = express.Router();
 
@@ -20,5 +21,7 @@ router.post('/playlist/:id/updatesong/:songid', playlist.updateSong);
 router.get('/playlist/:id/deletesong/:songid', playlist.deleteSong);
 
 router.get('/dashboard/deleteplaylist/:id', dashboard.deletePlaylist);
+
+router.get("/stats", stats.createView);
 
 export default router;
