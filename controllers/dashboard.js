@@ -32,7 +32,20 @@ deletePlaylist(request, response) {
   response.redirect('/dashboard');
 },
 
+async addPlaylist(request, response) {
+  const timestamp = new Date();
 
+  const newPlaylist = {
+    id: uuidv4(),
+    title: request.body.title,
+   rating: parseInt(request.body.rating) || 3,  /* Update the Add Playlist form (and related function) so that a rating can be given to new playlists. done here */
+    date: timestamp,
+    songs: []
+  };
+
+  await playlistStore.addPlaylist(newPlaylist);
+  response.redirect('/dashboard');
+},
 
 };
 
