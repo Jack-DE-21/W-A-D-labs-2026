@@ -1,218 +1,33 @@
 {
   "playlistCollection": [
     {
-      "id": "01",
-      "title": "Beethoven Sonatas",
-      "rating": 4,
+      "userid": "39dfe890-575f-4081-808d-901981efdece",
+      "id": "ca153353-0457-44b0-b41f-1378ee7fdb1d",
+      "title": "e",
+      "rating": 3,
+      "date": "2026-04-14T16:50:56.839Z",
       "songs": [
         {
-          "id": "04",
-          "title": "Piano Sonata No. 3 xd",
-          "artist": "Beethoven"
-        },
-        {
-          "id": "05",
-          "title": "Piano Sonata No. 7",
-          "artist": "Beethoven"
-        },
-        {
-          "id": "06",
-          "title": "Piano Sonata No. 10",
-          "artist": "Beethoven"
-        }
-      ]
-    },
-    {
-      "id": "02",
-      "title": "Beethoven Concertos",
-      "rating": 2,
-      "songs": [
-        {
-          "id": "07",
-          "title": "Piano Concerto No. 0",
-          "artist": "Beethoven"
-        },
-        {
-          "id": "08",
-          "title": "Piano Concerto No. 4",
-          "artist": "Beethoven"
-        },
-        {
-          "id": "09",
-          "title": "Piano Concerto No. 6",
-          "artist": "Beethoven"
-        }
-      ]
-    },
-    {
-      "id": "03",
-      "title": "Beethoven Unfinished Symphonies",
-      "rating": 5,
-      "songs": [
-        {
-          "id": "cf277f72-88c4-4ffe-874e-9c409349acf7",
-          "title": "gfsd",
-          "artist": "dgfs"
-        }
-      ]
-    },
-    {
-      "id": "08cb435a-c0d7-4449-bdb4-19b6285b1398",
-      "title": "ghj",
-      "songs": [
-        {
-          "id": "df83f2de-02ec-4b61-877a-dbe106704957",
-          "title": "dc",
+          "id": "e36f24ce-0d7f-4726-b473-8e39155565d1",
+          "title": "df",
           "artist": "sdf"
-        },
-        {
-          "id": "ccb0ba7f-d86a-4f18-b508-921707687d29",
-          "title": "fg",
-          "artist": "gf"
         }
       ]
     },
     {
-      "id": "75dfecfc-c122-4d94-a7ab-4d23d303aaba",
-      "title": "dfhg",
-      "date": "2026-03-20T20:35:48.851Z",
-      "songs": []
-    },
-    {
-      "id": "9e5a4052-8cfb-41d9-bbc7-3439d15d9d85",
-      "title": "gfhfgh",
-      "date": "2026-03-20T20:36:12.157Z",
-      "songs": []
-    },
-    {
-      "id": "c8cbcf15-53e0-40ba-9e1d-f2ce4dbc2a21",
-      "title": "cvb",
-      "date": "2026-03-20T21:03:32.803Z",
-      "songs": [
-        {
-          "id": "cf3c177a-c7bd-428e-a2b9-a3d0f2208eda",
-          "title": "vb",
-          "artist": "b"
-        }
-      ]
-    },
-    {
-      "id": "869e527f-864f-4e42-accd-0b77b02f4320",
-      "title": "fg",
-      "rating": 3,
-      "date": "2026-03-20T21:08:45.551Z",
-      "songs": []
-    },
-    {
-      "id": "75e54a78-3623-44ee-ad84-1552e727ead6",
-      "title": "vbxc",
-      "rating": 4,
-      "date": "2026-03-20T21:16:26.690Z",
-      "songs": []
-    },
-    {
-      "id": "c7e0f923-32da-4fa2-a614-4edf849d8b9d",
-      "title": "safdfasd",
+      "userid": "39dfe890-575f-4081-808d-901981efdece",
+      "id": "b2a3ca7c-6832-44c7-b31d-8a6683f72c05",
+      "title": "sd",
       "rating": 5,
-      "date": "2026-03-20T21:16:35.703Z",
+      "date": "2026-04-14T16:51:06.559Z",
       "songs": []
     },
     {
-      "id": "37c5f4c8-f50d-4b87-be97-e362bf711704",
-      "title": "dfgd",
-      "rating": 3,
-      "date": "2026-03-20T21:20:39.581Z",
-      "songs": []
-    },
-    {
-      "id": "7fe632ab-e965-47d5-a9e2-815941c252ad",
-      "title": "dfg",
-      "rating": 3,
-      "date": "2026-03-20T23:08:50.998Z",
-      "songs": []
-    },
-    {
-      "id": "513f33f6-65cc-40ab-9089-c182d41223c1",
-      "title": "l",
-      "rating": 3,
-      "date": "2026-03-20T23:08:53.468Z",
-      "songs": []
-    },
-    {
-      "id": "a86834df-3e82-4122-a14d-0433984ba519",
-      "title": "hgj",
-      "rating": 3,
-      "date": "2026-03-20T23:14:32.947Z",
-      "songs": []
-    },
-    {
-      "id": "d786cdc7-593f-4cb5-9bb1-99e0d7f9ed90",
-      "title": "fg",
-      "rating": 3,
-      "date": "2026-03-20T23:14:50.036Z",
-      "songs": []
-    },
-    {
-      "id": "6f756865-be53-4a05-998c-5fd1b69749ae",
-      "title": "ds",
-      "rating": 3,
-      "date": "2026-03-20T23:14:53.302Z",
-      "songs": []
-    },
-    {
-      "id": "3ad4df0f-ce0a-468f-a50e-21bfb2945b29",
-      "title": "sdf",
-      "rating": 5,
-      "date": "2026-03-20T23:15:05.981Z",
-      "songs": []
-    },
-    {
-      "id": "7c90d8a2-6115-4dcd-98ef-da264a2c30fc",
-      "title": "hgf",
-      "rating": 4,
-      "date": "2026-03-20T23:15:33.007Z",
-      "songs": []
-    },
-    {
-      "id": "68ba6c92-447e-4f41-a115-605cd3fb06cd",
-      "title": "cx",
-      "rating": 4,
-      "date": "2026-03-20T23:20:51.760Z",
-      "songs": []
-    },
-    {
-      "id": "08041e31-2421-4dd6-b817-6b9f6b081356",
-      "title": "xc",
-      "rating": 4,
-      "date": "2026-03-20T23:20:58.453Z",
-      "songs": []
-    },
-    {
-      "id": "e912feaa-bed4-4701-b556-04b8a4538154",
-      "title": "v",
-      "rating": 4,
-      "date": "2026-03-20T23:21:46.836Z",
-      "songs": []
-    },
-    {
-      "id": "58db52eb-c83a-46a8-b639-ccc1a5fb49bf",
-      "title": "fg",
-      "rating": 2,
-      "date": "2026-03-20T23:25:39.372Z",
-      "songs": []
-    },
-    {
-      "id": "78b27233-4633-4adc-a9a9-64870d309874",
-      "title": "fgdgheth",
-      "rating": 5,
-      "date": "2026-03-20T23:25:45.167Z",
-      "songs": []
-    },
-    {
-      "id": "e5e73e8c-e5a3-4f85-a1fb-527aedc52d1a",
-      "title": "dcfsdf",
-      "rating": 5,
-      "date": "2026-03-26T15:54:28.957Z",
+      "userid": "a9b17e0c-17e8-4b90-b627-a13428e3c3d2",
+      "id": "4422abc6-fe15-4ffc-81b1-c914fb1fa1b5",
+      "title": "FWEF",
+      "rating": 1,
+      "date": "2026-04-14T17:13:47.361Z",
       "songs": []
     }
   ]

@@ -38,6 +38,25 @@ editSong(id, songId, updatedSong) {
 },
 
 
+searchPlaylist(search) {
+  return this.store.findBy(
+    this.collection,
+    (playlist) => playlist.title.toLowerCase().includes(search.toLowerCase())
+  );
+},
+
+
+getUserPlaylists(userid) {
+  return this.store.findBy(this.collection, (playlist => playlist.userid === userid));
+},
+
+searchUserPlaylists(search, userid) {
+  return this.store.findBy(
+    this.collection,
+    (playlist => playlist.userid === userid && playlist.title.toLowerCase().includes(search.toLowerCase())))
+},
+
+
 };
 
 export default playlistStore;

@@ -1,69 +1,77 @@
-"use strict";
+'use strict';
 
 import logger from "../utils/logger.js";
 import playlistStore from "../models/playlist-store.js";
+import userStore from "../models/user-store.js";
+import accounts from "./accounts.js";
 
 const stats = {
   createView(request, response) {
-    logger.info("Stats page loading!");
+    const loggedInUser = accounts.getCurrentUser(request);
 
-    const playlists = playlistStore.getAllPlaylists();
+    if (loggedInUser) {
+      logger.info("Stats page loading!");
 
-    const numPlaylists = playlists.length;
+      const playlists = playlistStore.getAllPlaylists();
 
-    const numSongs = playlists.reduce(
-      (total, playlist) => total + (playlist.songs ? playlist.songs.length : 0),
-      0
-    );
+      const numPlaylists = playlists.length;
 
-    const average =
-      numPlaylists > 0 ? (numSongs / numPlaylists).toFixed(2) : "0.00";
+      const numSongs = playlists.reduce(
+        (total, playlist) => total + playlist.songs.length,
+        0
+      );
 
-    const totalRating = playlists.reduce(
-      (total, playlist) => total + (Number(playlist.rating) || 0),
-      0
-    );
+      const average = numPlaylists > 0 ? (numSongs / numPlaylists).toFixed(2) : 0;
 
-    const avgRating =
-      numPlaylists > 0 ? (totalRating / numPlaylists).toFixed(2) : "0.00";
+      const totalRating = playlists.reduce(
+        (total, playlist) => total + parseInt(playlist.rating),
+        0
+      );
 
-    const ratings = playlists.map((playlist) => Number(playlist.rating) || 0);
-    const maxRating = ratings.length > 0 ? Math.max(...ratings) : 0;
+      const avgRating = numPlaylists > 0 ? totalRating / numPlaylists : 0;
 
-    const maxRated = playlists.filter(
-      (playlist) => (Number(playlist.rating) || 0) === maxRating
-    );
+      const maxRating =
+        playlists.length > 0
+          ? Math.max(...playlists.map((playlist) => playlist.rating))
+          : 0;
 
-    const favTitles = maxRated.map((item) => item.title);
+      const maxRated = playlists.filter((playlist) => playlist.rating === maxRating);
+      const favTitles = maxRated.map((item) => item.title);
 
-    const songCounts = playlists.map((playlist) =>
-      playlist.songs ? playlist.songs.length : 0
-    );
-    const mostSongs = songCounts.length > 0 ? Math.max(...songCounts) : 0;
+      const longestSize =
+        playlists.length > 0
+          ? Math.max(...playlists.map((playlist) => playlist.songs.length))
+          : 0;
 
-    const mostSongsPlaylists = playlists.filter(
-      (playlist) => (playlist.songs ? playlist.songs.length : 0) === mostSongs
-    );
+      const longestPlaylists = playlists.filter(
+        (playlist) => playlist.songs.length === longestSize
+      );
+      const longestPlaylistTitles = longestPlaylists.map((item) => item.title);
 
-    const mostSongsTitles = mostSongsPlaylists.map((playlist) => playlist.title);
+      const numUsers = userStore.getAllUsers().length;
 
-    const statistics = {
-      displayNumPlaylists: numPlaylists,
-      displayNumSongs: numSongs,
-      displayAverage: average,
-      displayAvgRating: avgRating,
-      highest: maxRating,
-      displayFav: favTitles,
-      displayMostSongs: mostSongs,
-      displayMostSongsTitles: mostSongsTitles,
-    };
+      const statistics = {
+        displayNumPlaylists: numPlaylists,
+        displayNumSongs: numSongs,
+        displayAverage: average,
+        displayAvgRating: avgRating,
+        highest: maxRating,
+        displayFav: favTitles,
+        longest: longestSize,
+        longestTitles: longestPlaylistTitles,
+        displayNumUsers: numUsers,
+      };
 
-    const viewData = {
-      title: "Playlist App Statistics",
-      stats: statistics,
-    };
+      const viewData = {
+        title: "Playlist App Statistics",
+        stats: statistics,
+        fullname: loggedInUser.firstName + " " + loggedInUser.lastName,
+      };
 
-    response.render("stats", viewData);
+      response.render("stats", viewData);
+    } else {
+      response.redirect("/");
+    }
   },
 };
 

@@ -4,18 +4,23 @@
 
   <h2>Playlist App Statistics</h2>
 
-  <h3 class="ui header">
-    App Statistics
-  </h3>
-  <p>
-    The playlist app now contains:
-  </p>
+  <h3 class="ui header">App Statistics</h3>
+  <p>The playlist app now contains:</p>
 
   {{#with stats}}
     <div class="ui center aligned grid">
 
       <div class="ui sixteen wide column">
-        <div class="ui centered three statistics">
+        <div class="ui centered four statistics">
+
+          <div class="ui red statistic">
+            <div class="value">
+              <i class="user icon"></i>
+            </div>
+            <div class="label">
+              {{displayNumUsers}} users
+            </div>
+          </div>
 
           <div class="ui statistic">
             <div class="value">
@@ -80,9 +85,9 @@
               <i class="plus icon"></i>
             </div>
             <div class="label">
-              Largest Playlist: {{displayMostSongs}} songs
+              Largest Playlist: {{longest}} songs
               <table>
-                {{#each displayMostSongsTitles}}
+                {{#each longestTitles}}
                   <tr>
                     <td>{{this}}</td>
                   </tr>
